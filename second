@@ -1,4 +1,23 @@
-hit ttis dfddo;bjo   
-vgjhbjkhkcnb v
-13b,
-yi09599
+
+CF commands:
+1. cf apps --> it will display the list of apps present on the pcf.
+2.push --> Push a new app or sync changes to an existing app.
+  -i :Number of instances
+k:Disk limit (e.g. 256M, 1024M, 1G
+m: Memory limit (e.g. 256M, 1024M, 1G)
+--no-hostname:Map the root domain to this app
+--no-route:Do not map a route to this app and remove routes from previous pushes of this app
+--no-star:Do not start an app after pushing
+-p:Path to app directory or to a zip file of the contents of the app directory
+-random-route:Create a random route for this app.
+3.scale - Change or view the instance count, disk space limit, and memory limit for an app
+cmd:cf scale APP_NAME [-i INSTANCES] [-k DISK] [-m MEMORY] [-f]
+-f: Force restart of app without prompt.
+-i: Number of instances
+-k: Disk limit (e.g. 256M, 1024M, 1G)
+-m: Memory limit (e.g. 256M, 1024M, 1G)
+Delete an app:
+cmd: cf delete APP_NAME [-r] [-f]
+f--> is for force delete , r--> is deleting the routes of the app if the routes are available.
+Restage: cf restage appname
+https://docs.cloudfoundry.org/cf-cli/cf-help.html
